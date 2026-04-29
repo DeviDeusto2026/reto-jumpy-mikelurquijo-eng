@@ -8,10 +8,12 @@ public class FoxMovement : MonoBehaviour
     public bool canJump = true;
     public int jumpForce = 450;
 
+
     private Rigidbody rb;
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
+        //oldY = (int)gameObject.transform.position.y;
     }
 
     // Update is called once per frame
@@ -29,6 +31,8 @@ public class FoxMovement : MonoBehaviour
     private void FixedUpdate()
     {
         jump();
+
+        //JumpCollision();
     }
 
     private void jump() {
@@ -55,4 +59,6 @@ public class FoxMovement : MonoBehaviour
         }
 
     }
+
+    
 }
